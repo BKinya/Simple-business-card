@@ -1,0 +1,2 @@
+rootProject.name = "My Compose app"
+include ':app'
