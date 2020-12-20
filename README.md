@@ -16,7 +16,5 @@ Exploring Jetpack compose,Text:
 https://joebirch.co/android/exploring-jetpack-compose-text/
 
 ### Notes
-
 #### Modifier
-
-When chaining modifiers as the order matter
+When chaining modifiers, the order matter
