@@ -2,14 +2,18 @@ package com.example.mycomposeapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.res.imageResource
@@ -43,30 +47,40 @@ fun MyApp(content: @Composable () -> Unit) {
 @Composable
 fun ScreenContent() {
     val image = imageResource(id = R.drawable.flower)
+    val surfaceModifier = Modifier.padding(16.dp)
     val columnModifier = Modifier
         .fillMaxWidth()
-        .padding(48.dp)
+        .padding(24.dp)
+
     val imageModifier = Modifier
         .height(180.dp)
         .width(180.dp)
         .clip(CircleShape)
 
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = columnModifier
-
+    Surface(
+        shape = RectangleShape,
+        border = BorderStroke(width = 1.dp, color = Color(0xFF212121)),
+        modifier = surfaceModifier
     ) {
-        Image(asset = image, modifier = imageModifier, contentScale = ContentScale.Crop)
-        CardDetail(label = "Name", value = "Foo Bar")
-        CardDetail(label = "Email", value = "foo@example.com")
-        CardDetail(label = "Phone", value = "000 0000 0000")
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = columnModifier
+
+        ) {
+
+                Image(asset = image, modifier = imageModifier, contentScale = ContentScale.Crop)
+            CardDetail(label = "Name", value = "Foo Bar")
+            CardDetail(label = "Email", value = "foo@example.com")
+            CardDetail(label = "Phone", value = "000 0000 0000")
+        }
     }
 }
 
 @Composable
 fun CardDetail(label: String, value: String) {
     val textViewModifier = Modifier.padding(start = 4.dp, top = 0.dp, end = 0.dp, bottom = 0.dp)
-    val rowModifier = Modifier
+    val rowModifier = Modifier.fillMaxWidth()
+
 
 
     val textStyle = TextStyle(
@@ -75,7 +89,8 @@ fun CardDetail(label: String, value: String) {
         fontFamily = FontFamily.Monospace
     )
     Row(
-        modifier = rowModifier
+        modifier = rowModifier,
+        horizontalArrangement = Arrangement.Start
     ) {
         Text(text = "$label:", style = textStyle)
         Text(text = value, modifier = textViewModifier, style = textStyle)
