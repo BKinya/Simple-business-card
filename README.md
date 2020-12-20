@@ -7,10 +7,16 @@ Simple business card using Jetpack compose
 #Row
 #Modifier
 
-Jetpack is similar to Flutter in many ways. Are there any diffrences between the two?
+Jetpack is similar to Flutter in many ways. Are there any differences between the two?
 
 
-Resources/Blogs
+### Resources/Blogs
 
 Exploring Jetpack compose,Text:
 https://joebirch.co/android/exploring-jetpack-compose-text/
+
+### Notes
+
+#### Modifier
+
+When chaining modifiers as the order matter
