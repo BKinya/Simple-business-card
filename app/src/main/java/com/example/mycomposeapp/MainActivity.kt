@@ -15,7 +15,6 @@ import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
 import com.example.mycomposeapp.ui.MyComposeAppTheme
-import com.example.mycomposeapp.ui.lightBlue200
 import com.example.mycomposeapp.ui.lightBlue500
 
 class MainActivity : AppCompatActivity() {
@@ -63,20 +62,20 @@ fun MyLayout() {
                 backgroundColor = Color(0xFFffffff)
             ) {
                 IconButton(onClick = {}) {
-                    Icon(Icons.Filled.Home, tint = lightBlue500,)
+                    Icon(Icons.Filled.Home, tint = lightBlue500)
                 }
                 IconButton(onClick = {}) {
-                    Icon(Icons.Filled.Favorite, tint = lightBlue500,)
+                    Icon(Icons.Filled.Favorite, tint = lightBlue500)
                 }
                 IconButton(onClick = {}) {
-                    Icon(Icons.Filled.LibraryAdd, tint = lightBlue500,)
+                    Icon(Icons.Filled.LibraryAdd, tint = lightBlue500)
                 }
                 IconButton(onClick = {}) {
-                    Icon(Icons.Filled.Bookmark, tint = lightBlue500,)
+                    Icon(Icons.Filled.Bookmark, tint = lightBlue500)
                 }
             }
         }
-    ) { _ ->
+    ) {
         BodyContent(modifier = Modifier.padding(16.dp))
 
     }
