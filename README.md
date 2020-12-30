@@ -16,7 +16,12 @@ Exploring Jetpack compose,Text:
 https://joebirch.co/android/exploring-jetpack-compose-text/
 
 ### Notes
-
 #### Modifier
+When chaining modifiers, the order matter
 
-When chaining modifiers as the order matter
+#### Material design components
+
+https://github.com/BKinya/Simple-business-card/tree/material-components
+
+Scalffold, TopAppBar, BottomNavigation, Slot Api
+
