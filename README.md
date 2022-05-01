@@ -1,5 +1,5 @@
 # Simple-business-card
-Simple business card using Jetpack compose
+Business card using Jetpack compose
 
 #composition
 #layout
